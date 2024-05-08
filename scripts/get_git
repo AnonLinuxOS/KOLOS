@@ -29,8 +29,10 @@ _get_repo_already_downloaded() {
 }
 
 _get_repo_clean() {
-  git clean -fdx
-  git checkout -- .
+  if [[ $(git ls-files --others) ]]; then
+    git clean -fdx
+    git checkout -- .
+  fi
 }
 
 # Latest file already present, exit now...
