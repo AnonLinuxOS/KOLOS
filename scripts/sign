@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
+
+. config/options ""
+
+BUILD_FILENAME=$(<${BUILD}/BUILD_FILENAME)
+
+gpg --sign -u $GPG_KEY_ID release/$BUILD_FILENAME.img.gz.sha256
