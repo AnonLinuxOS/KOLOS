@@ -144,7 +144,7 @@ makeinstall_target() {
   if [ -d "${PKG_DIR}/sources/${DEVICE}" ]; then
     cp -rf ${PKG_DIR}/sources/${DEVICE}/* ${INSTALL}/usr/config/retroarch/
   else
-    echo "Configure retroarch for ${DEVICE}"
+    echo "error: Configuration retroarch for ${DEVICE} is missing at ${PKG_DIR}/sources/${DEVICE}"
     exit 1
   fi
 
