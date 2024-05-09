@@ -1782,7 +1782,7 @@ start_system_doc() {
   fi
   if [ ! -d "${SYSDOCROOT}" ]
   then
-    mkdir ${SYSDOCROOT}
+    mkdir -p ${SYSDOCROOT}
   fi
   if [ -e "${SYSDOC}.md" ]
   then
