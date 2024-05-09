@@ -4,11 +4,25 @@
 
 KOLOS is an immutable Linux distribution for handheld gaming devices developed by a small community of enthusiasts. Our goal was to produce an operating system that has the features and capabilities that we need, and to have fun as we develop it.
 
+<table>
+  <tr>
+    <td><img src="https://i.imgur.com/7xTtsu0.png"/></td>
+  </tr>
+</table>
+
 ## Project Inception
 
-KOLOS is a fork of [JELOS](https://github.com/JustEnoughLinuxOS), its goal is to provide a LTS ([Long-term support](https://en.wikipedia.org/wiki/Long-term_support)) version for RK3566 devices (Anbernic RG353P/M/V/VS, RG503, Powkiddy RK2023, RGB30, RGB10, Max 3, and x55) based from the time the upstream project was archived (May 8th 2024) by [fewtarius](https://github.com/fewtarius).
+KOLOS is a fork of [JELOS](https://github.com/JustEnoughLinuxOS), its goal is to provide a LTS ([Long-term support](https://en.wikipedia.org/wiki/Long-term_support)) version for RK3566 devices ([Anbernic](https://anbernic.com/) RG353P/M/V/VS, RG503, [Powkiddy](https://powkiddy.com/) RK2023, RGB30, RGB10 and Max 3) based from the time the upstream project was archived (May 8th 2024) by [fewtarius](https://github.com/fewtarius).
 
 All licenses apply and credit goes to the [JELOS team](https://github.com/JustEnoughLinuxOS/distribution/graphs/contributors) for the original work.
+
+## Download
+
+- [KOLOS-RK3566.aarch64-20240509.img.gz](https://github.com/AnonLinuxOS/KOLOS/releases/download/v24.5.0/KOLOS-RK3566.aarch64-20240509.img.gz) | [checksum](https://github.com/AnonLinuxOS/KOLOS/releases/download/v24.5.0/KOLOS-RK3566.aarch64-20240509.img.gz.sha256) | [signature](https://github.com/AnonLinuxOS/KOLOS/releases/download/v24.5.0/KOLOS-RK3566.aarch64-20240509.img.gz.sha256.gpg) | [key](https://keys.openpgp.org/search?q=DF7C482DAFB098909C48CF9282A84F69E714B0C6)
+
+## Install
+
+    gunzip -c KOLOS-RK3566.aarch64-20240509.img.gz | sudo dd of=/dev/$THINK_TWICE bs=8M oflag=sync,direct status=progress
 
 ## How To Build
 
