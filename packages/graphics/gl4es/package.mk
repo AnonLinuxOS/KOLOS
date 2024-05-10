@@ -15,7 +15,6 @@ case ${DEVICE} in
     PKG_SITE="https://github.com/JohnnyonFlame/gl4es"
     PKG_URL="${PKG_SITE}.git"
     PKG_VERSION="17a7876ae76eb7b50ff375d80abd35018e58a50d"
-    PKG_GIT_CLONE_BRANCH="ge2d"
   ;;
   *)
     PKG_SITE="https://github.com/ptitSeb/gl4es"
@@ -24,6 +23,7 @@ case ${DEVICE} in
   ;;
 esac
 
+PKG_GIT_CLONE_BRANCH="master"
 
 pre_configure_target() {
   PKG_CMAKE_OPTS_TARGET=" -DGBM=ON -DCMAKE_BUILD_TYPE=Release "

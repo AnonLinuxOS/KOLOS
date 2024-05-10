@@ -182,4 +182,4 @@
   DISTRO_PKG_SETTINGS=""
 
 # Enable Updates
-  ENABLE_UPDATES="yes"
+  ENABLE_UPDATES="no"
