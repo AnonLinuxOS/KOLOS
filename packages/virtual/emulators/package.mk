@@ -8,8 +8,7 @@ PKG_SECTION="emulation" # Do not change to virtual or makeinstall_target will no
 PKG_LONGDESC="Emulation metapackage."
 PKG_TOOLCHAIN="manual"
 
-PKG_EMUS="flycast-sa gzdoom-sa hatarisa hypseus-singe moonlight openbor pico-8 ppsspp-sa
-          vice-sa"
+PKG_EMUS="flycast-sa hatarisa hypseus-singe moonlight openbor pico-8 ppsspp-sa"
 
 PKG_RETROARCH="core-info libretro-database retroarch retroarch-assets retroarch-joypads retroarch-overlays     \
               slang-shaders"
@@ -23,10 +22,10 @@ LIBRETRO_CORES="81-lr a5200-lr arduous-lr atari800-lr beetle-gba-lr beetle-lynx-
                 gw-lr handy-lr hatari-lr idtech-lr jaxe-lr mame-lr mame2003-plus-lr mame2010-lr mame2015-lr melonds-lr      \
                 mesen-lr mgba-lr mojozork-lr mupen64plus-lr mupen64plus-nx-lr neocd_lr nestopia-lr np2kai-lr    \
                 o2em-lr opera-lr parallel-n64-lr pcsx_rearmed-lr picodrive-lr pokemini-lr potator-lr          \
-                prosystem-lr puae-lr puae2021-lr px68k-lr quasi88-lr quicknes-lr race-lr same_cdi-lr      \
+                prosystem-lr puae-lr puae2021-lr quasi88-lr quicknes-lr race-lr same_cdi-lr      \
                 sameboy-lr sameduck-lr scummvm-lr smsplus-gx-lr snes9x-lr snes9x2002-lr snes9x2005_plus-lr snes9x2010-lr  \
-                stella-lr swanstation-lr tic80-lr tgbdual-lr uzem-lr vba-next-lr minivmac-lr               \
-                vbam-lr vecx-lr vice-lr yabasanshiro-lr virtualjaguar-lr xmil-lr"
+                stella-lr swanstation-lr tgbdual-lr uzem-lr vba-next-lr minivmac-lr               \
+                vbam-lr vecx-lr yabasanshiro-lr virtualjaguar-lr xmil-lr"
 
 ### Emulators or cores for specific devices
 case "${DEVICE}" in
@@ -249,30 +248,6 @@ makeinstall_target() {
   add_emu_core colecovision retroarch gearcoleco false
   add_emu_core colecovision retroarch smsplus false
   add_es_system colecovision
-
-  ### Commodore 128
-  add_emu_core c128 retroarch vice_x128 true
-  add_emu_core c128 vicesa x128 false
-  add_es_system c128
-
-  ### Commodore 16
-  add_emu_core c16 retroarch vice_xplus4 true
-  add_emu_core c16 vicesa xplus4 false
-  add_es_system c16
-
-  ### Commodore 64
-  add_emu_core c64 retroarch vice_x64 true
-  add_emu_core c64 vicesa x64sc false
-  add_es_system c64
-
-  ### Commodore PET
-  add_emu_core pet retroarch vice_xpet true
-  add_es_system pet
-
-  ### Commodore VIC-20
-  add_emu_core vic20 retroarch vice_xvic true
-  add_emu_core vic20 vicesa xvic false
-  add_es_system vic20
 
   ### Capcom Playsystem 1
   add_emu_core cps1 retroarch fbneo true
@@ -1134,10 +1109,6 @@ makeinstall_target() {
   add_emu_core supervision retroarch potator true
   add_es_system supervision
 
-  ### Nesbox TIC-80
-  add_emu_core tic-80 retroarch tic80 true
-  add_es_system tic-80
-
   ### NEC TurboGrafx 16
   add_emu_core tg16 retroarch beetle_pce_fast true
   add_emu_core tg16 retroarch beetle_pce false
@@ -1220,10 +1191,6 @@ makeinstall_target() {
     ;;
   esac
   add_es_system ports
-
-  ### Doom
-  add_emu_core doom gzdoom gzdoom-sa true
-  add_es_system doom
 
   ### Media Player
   add_emu_core mplayer mplayer mplayer true
