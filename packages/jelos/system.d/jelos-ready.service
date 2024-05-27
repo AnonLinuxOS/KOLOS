@@ -1,0 +1,14 @@
+[Unit]
+Description=KOLOS system ready script
+Requires=emustation.service
+After=emustation.service
+
+[Service]
+Type=oneshot
+Environment=HOME=/storage
+EnvironmentFile=/etc/profile
+ExecStart=/usr/bin/system-ready
+RemainAfterExit=yes
+
+[Install]
+WantedBy=jelos.target

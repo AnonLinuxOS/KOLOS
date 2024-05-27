@@ -90,6 +90,7 @@ rm /var/lock/start.games 2>&1 >>${BOOTLOG}
 touch /var/lock/start.games 2>&1 >>${BOOTLOG}
 log "Starting ${UI_SERVICE}..."
 systemctl start ${UI_SERVICE} 2>&1 >>${BOOTLOG} &
+systemctl start jelos-ready.service 2>&1 >>${BOOTLOG} &
 
 DEVICE_CPU_GOVERNOR=$(get_setting system.cpugovernor)
 ${DEVICE_CPU_GOVERNOR} 2>&1 >>${BOOTLOG}

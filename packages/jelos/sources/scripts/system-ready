@@ -1,0 +1,8 @@
+#!/bin/bash
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (C) 2024 KOLOS (https://github.com/AnonLinuxOS/KOLOS)
+
+kill $(<"/tmp/bootsplash.pid")
+rm /tmp/bootsplash.pid
+
+exit 0
